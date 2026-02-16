@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dsq8j7ubgwh7m"]
+
+[node name="TextBox" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -4.0
+offset_right = 11.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2

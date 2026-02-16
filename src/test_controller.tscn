@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://c03p1x2ke00qi"]
+
+[ext_resource type="Script" uid="uid://ddjb6oe0ua1gp" path="res://src/test_controller.gd" id="1_mvhed"]
+[ext_resource type="Texture2D" uid="uid://31tm3lswx4tr" path="res://icon.svg" id="2_pjw1a"]
+
+[node name="TestController" type="Node2D"]
+script = ExtResource("1_mvhed")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -92.0
+offset_right = -7.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Insert IP address..."
+
+[node name="Button" type="Button" parent="."]
+offset_left = -155.0
+offset_top = 8.5
+offset_right = -118.0
+offset_bottom = 39.5
+text = "TRY"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 34.0
+offset_top = -91.0
+offset_right = 74.0
+offset_bottom = -68.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-204, 123)
+texture = ExtResource("2_pjw1a")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

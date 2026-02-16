@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0ivvrggh01sl"]
+
+[ext_resource type="Script" uid="uid://c6xew2l28uqtq" path="res://src/controller.gd" id="1_d60pg"]
+
+[node name="Controller" type="Node2D"]
+script = ExtResource("1_d60pg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -328.0
+offset_top = -266.0
+offset_right = -139.0
+offset_bottom = -69.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Input" type="Node2D" parent="."]

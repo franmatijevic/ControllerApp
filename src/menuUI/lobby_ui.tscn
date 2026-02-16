@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ca01ab3cjk4"]
+
+[ext_resource type="Script" uid="uid://d3hpjdvxndc6q" path="res://src/menuUI/lobby_ui.gd" id="1_wd1tk"]
+
+[node name="LobbyUI" type="Control"]
+custom_minimum_size = Vector2(512, 107)
+layout_mode = 3
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+script = ExtResource("1_wd1tk")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -62.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="LobbyName" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Lobby"
+
+[node name="Game" type="Label" parent="."]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 316.0
+offset_bottom = 58.0
+text = "Game:SpaceShooter"
+
+[node name="Players" type="Label" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 36.0
+offset_right = 708.0
+offset_bottom = 59.0
+text = "1/1"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

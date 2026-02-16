@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://xv6335ahdp6k"]
+
+[ext_resource type="Script" uid="uid://br1kkr8dkhq5v" path="res://src/button/button.gd" id="1_8nwn5"]
+[ext_resource type="Texture2D" uid="uid://31tm3lswx4tr" path="res://icon.svg" id="2_1pwhg"]
+
+[node name="Button" type="Node2D"]
+script = ExtResource("1_8nwn5")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-64, -64)
+texture_normal = ExtResource("2_1pwhg")
+
+[node name="Text" type="Label" parent="."]
+offset_left = -63.0
+offset_top = -63.0
+offset_right = 65.0
+offset_bottom = 63.0
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_touch_screen_button_released"]
